@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --background-color: #FAFAFA;
+    --text-color: #303030;
+    --primary-color: #747fe0;
+    --glass-color: rgba(250, 250, 250, 0.2);
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: Outfit, sans-serif;
+    height: 100dvh;
+    padding: 1rem;
+}
+
+/* Top and Footer */
+
+#intro {
+    margin-bottom: 1rem;
+    max-width: 25rem;
+}
+
+#name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+#description {
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
+/* Icons and Skills */
+
+#icons, #skills {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#icons a img, #skills img {
+    transition: transform 0.25s ease;
+}
+
+#icons a img:hover, #skills img:hover {
+    transform: scale(1.05);
+}
+
+/* Projects */
+
+#projects {
+    display: grid;
+    gap: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project {
+    background: var(--primary-color);
+    border-radius: 0.25rem;
+    color: var(--background-color);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 600px;
+    padding: 1rem;
+    transition: transform 0.25s ease, box-shadow 0.5s ease;
+}
+
+.project:hover {
+    box-shadow: -0.5rem 0.5rem 30px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-0.5rem);
+}
+
+.project h3 {
+    margin-top: 0rem;
+    margin-bottom: 0.5rem;
+}
+
+#languages {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.language {
+    background: var(--glass-color);
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+}

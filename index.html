@@ -5,101 +5,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Johnathan Donnelly</title>
         <link rel="stylesheet" href="./styles.css">
-        <!-- DevIcons -->
         <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-        <!-- Material Icons -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" />
     </head>
     <body>
-        <!-- Header -->
-        <!-- <header>
-            <span id="sun" class="material-symbols-outlined">sunny</span>
-            <span id="moon" class="material-symbols-outlined">bedtime</span>
-            <span id="trash" class="material-symbols-outlined">delete_forever</span>
-        </header> -->
-        <!-- Intro -->
-        <div id="intro">
-            <h1 id="name">Johnathan Donnelly</h1>
-            <span id="description">I'm a Networking & IT Security student who wants to help make the internet more private, safe, and better place.</span>
+        <div id="about">
+            <h1>Johnathan Donnelly</h1>
+            <span>I'm a Networking & IT Security student who wants to help make the internet more private, safe, and better place.</span>
         </div>
-        <!-- Icons -->
-        <div id="icons">
-            <div class="tooltip" data-tooltip="LinkedIn">
-                <a href="https://www.linkedin.com/in/johnathan-donnelly" target="_blank"><img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn"/></a>
-            </div>
-            <div class="tooltip" data-tooltip="GitHub">
-                <a href="https://www.github.com/johnarp" target="_blank"><img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"/></a>
+
+        <div>
+            <div class="tiles">
+                <a href="https://github.com/johnarp/" target="_blank" class="tile github"><i class="devicon-github-original"></i>GitHub</a>
+                <a href="https://www.linkedin.com/in/johnathan-donnelly/" target="_blank" class="tile linkedin"><i class="devicon-linkedin-plain"></i>LinkedIn</a>
             </div>
         </div>
-        <!-- Certifications -->
-        <h2>Certifications</h2>
-        <div id="certs">
-            <div class="tooltip" data-tooltip="AWS Certified Cloud Practitioner">
-                <a href="https://www.credly.com/badges/b3c68ca8-f006-40cf-b0d9-16837eb2062e/" target="_blank"><img width="40" height="40" src="./image.png"></a>
+
+        <div>
+            <h2>Certifications</h2>
+            <div class="tiles">
+                <span class="tile"><i class="devicon-amazonwebservices-plain"></i>AWS Certified Cloud Practitioner</span>
             </div>
         </div>
-        <!-- Skills -->
-        <h2>Skills</h2>
-        <div id="skills">
-            <div class="tooltip" data-tooltip="Amazon Web Services">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="Amazon Web Services"/>
-            </div>
-            <div class="tooltip" data-tooltip="Azure">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="Azure"/>
-            </div>
-            <div class="tooltip" data-tooltip="CSS3">            
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS3"/>
-            </div>
-            <div class="tooltip" data-tooltip="HTML5">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML5"/>
-            </div>
-            <div class="tooltip" data-tooltip="JavaScript">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"/>
-            </div>
-            <div class="tooltip" data-tooltip="Kali Linux">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kalilinux/kalilinux-original.svg" alt="Kali Linux"/>
-            </div>
-            <div class="tooltip" data-tooltip="Python">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"/>
-            </div>
-            <div class="tooltip" data-tooltip="Markdown">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/markdown/markdown-original.svg" alt="Markdown"/>
-            </div>
-            <div class="tooltip" data-tooltip="Ubuntu">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ubuntu/ubuntu-original.svg" alt="Ubuntu"/>
-            </div>
-            <div class="tooltip" data-tooltip="Visual Studio Code">
-                <img width="40" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="Visual Studio Code"/>
+
+        <div>
+            <h2>Awards</h2>
+            <div class="tiles">
+                <span class="tile">President's List (2023-25)</span>
+                <span class="tile">Ontario Scholar (2023)</span>
             </div>
         </div>
-        <!-- Projects -->
+
         <div>
             <h2>Projects</h2>
-            <div id="projects">
-                <div class="project">
-                    <a href="https://www.github.com/johnarp/username-generator" target="_blank">
-                        <h3>Username Generator</h3>
-                        <span>A simple browser-based username generator using PyScript.</span>
-                        <div id="languages">
-                            <span class="language">PY</span>
-                            <span class="language">CSS</span>
-                            <span class="language">JS</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="project">
-                    <a href="https://www.github.com/johnarp/Is-This-a-Phish" target="_blank">
-                        <h3>Is This a Phish?</h3>
-                        <span>Learn to spot phishing emails through interactive lessons.</span>
-                        <div id="languages">
-                            <span class="language">HTML</span>
-                            <span class="language">CSS</span>
-                            <span class="language">JS</span>
-                        </div>
-                    </a>
-                </div>
+            <div class="tiles">
+                <span class="tile">CI/CD Pipeline with GitHub Actions & AWS EC2</span>
+                <span class="tile">Enterprise Network Design & Configuration</span>
+                <span class="tile">Incident Reporting Web Application</span>
+                <span class="tile">Object Oriented Message Encryption System</span>
             </div>
         </div>
+
+        <div>
+            <h2>Skills</h2>
+            <div class="tiles">
+                <span class="tile"><i class="devicon-css3-plain"></i>CSS</span>
+                <span class="tile"><i class="devicon-git-plain"></i>Git</span>
+                <span class="tile"><i class="devicon-html5-plain"></i>HTML</span>
+                <span class="tile"><i class="devicon-linux-plain"></i>Linux</span>
+                <span class="tile"><i class="devicon-python-plain"></i>Python</span>
+                <span class="tile">Computer Networking</span>
+                <span class="tile">Cisco IOS</span>
+                <span class="tile">Cybersecurity</span>
+                <span class="tile">Network Design</span>
+            </div>
+        </div>
+
         <footer>
             <span>Made by Johnathan Donnelly &copy; 2026</span>
         </footer>

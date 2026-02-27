@@ -1,174 +1,88 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+/* --------------------------------------------------
+    BASE
+-------------------------------------------------- */
+
 :root {
-    --background-color: light-dark(#FAFAFA, #303030);
-    --text-color: light-dark(#303030, #FAFAFA);
-
-    --primary-color: #747fe0;
-    --glass-color: rgba(250, 250, 250, 0.2);
-}
-
-html.light {
-    color-scheme: light;
-}
-
-html.dark {
-    color-scheme: dark;
+    --color-background: #FAFAFA;
+    --color-text: #303030;
+    --color-primary: #7b74e0;
+    --color-github: #24292e;
+    --color-linkedin: #0a66c2;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--color-background);
+    color: var(--color-text);
     font-family: Outfit, sans-serif;
-    height: 100dvh;
+    margin: 0 auto;
+    max-width: 30rem;
     padding: 1rem;
 }
 
-/* Header */
-
-header {
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-}
-
-header span.material-symbols-outlined {
-    cursor: pointer;
-}
-
-/* Top and Footer */
-
-#intro {
-    margin-bottom: 1rem;
-    max-width: 25rem;
-}
-
-#name {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin-bottom: 0.5rem;
-}
-
-#description {
-    font-weight: 700;
-}
-
 footer {
+    font-size: 0.75rem;
     margin-top: 1rem;
 }
 
-/* Icons and Skills */
+/* --------------------------------------------------
+    INTRODUCTION
+-------------------------------------------------- */
 
-#icons, #skills {
+h1 {
+    font-weight: 900;
+    margin-bottom: 0.25rem;
+}
+
+#about {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------
+    TILES
+-------------------------------------------------- */
+
+.tiles {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
 }
 
-#icons a img, #skills img {
-    transition: transform 0.25s ease;
-}
-
-#icons a img:hover, #skills img:hover {
-    transform: scale(1.05);
-}
-
-.tooltip {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-}
-
-/* tooltip */
-.tooltip::after {
-    background-color: var(--primary-color);
-    border-radius: 0.25rem;
-    color: var(--background-color);
-    content: attr(data-tooltip);
-    font-size: 0.75rem;
-    font-weight: 600;
-    /* left: 0; */
-    opacity: 0;
-    padding: 0.25rem;
-    pointer-events: none;
-    position: absolute;
-    transform: translateY(-0.25rem);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    /* below icon */
-    top: calc(100% + 0.6rem);
-}
-
-/* tooltip arrow */
-.tooltip::before {
-    border-color: var(--primary-color) transparent transparent transparent;
-    border-style: solid;
-    border-width: 0.4rem;
-    bottom: -0.8rem;
-    content: "";
-    /* left: 0.75rem; */
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-/* tooltip hover */
-.tooltip:hover::after, .tooltip:hover::before {
-    opacity: 1;
-    transform: translateY(0);
-    z-index: 1000;
-}
-
-/* Projects */
-
-#projects {
-    display: grid;
-    gap: 1rem;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.project {
-    background-color: var(--primary-color);
-    border-radius: 0.25rem;
-    /* color: var(--background-color); */
-    color: var(--background-color);
+a.tile {
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    max-width: 600px;
-    padding: 1rem;
-    transition: transform 0.25s ease, box-shadow 0.5s ease;
 }
 
-.project:hover {
-    box-shadow: 0 0.5rem 5rem 0 rgba(0, 0, 0, 0.2);
-    transform: translateY(-0.5rem);
+.tile {
+    align-items: center;
+    background-color: transparent;
+    border: 2px solid var(--color-text);
+    color: var(--color-text);
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;    
+    gap: 0.4rem;
+    padding: 0.5rem 1.1rem;
+    text-decoration: none;
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.project h3 {
-    margin-top: 0rem;
-    margin-bottom: 0.5rem;
+.tile:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-background)
 }
 
-#languages {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
+.tile.github:hover {
+    background-color: var(--color-github);
+    border-color: var(--color-github);
+    color: var(--color-background);
 }
 
-.language {
-    background-color: var(--glass-color);
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.25rem 0.5rem;
-}
-
-/* Themes Transition */
-body {
-    transition: background-color 0.25s ease, color 0.25s ease;
+.tile.linkedin:hover {
+    background-color: var(--color-linkedin);
+    border-color: var(--color-linkedin);
+    color: var(--color-background);
 }

@@ -10,6 +10,7 @@
     --color-primary: #7b74e0;
     --color-github: #24292e;
     --color-linkedin: #0a66c2;
+    --color-muted: #888;
 }
 
 body {
@@ -18,26 +19,71 @@ body {
     font-family: Outfit, sans-serif;
     margin: 0 auto;
     max-width: 30rem;
-    padding: 1rem;
+    padding: 1.5rem 1rem 1rem;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 footer {
     font-size: 0.75rem;
-    margin-top: 1rem;
+    color: var(--color-muted);
+    margin-top: 2rem;
+}
+
+/* --------------------------------------------------
+    SECTIONS
+-------------------------------------------------- */
+
+div + div {
+    margin-top: 1.5rem;
+}
+
+h2 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin: 0 0 0.6rem;
 }
 
 /* --------------------------------------------------
     INTRODUCTION
 -------------------------------------------------- */
 
-h1 {
-    font-weight: 900;
-    margin-bottom: 0.25rem;
+#about {
+    margin-bottom: 1.5rem;
 }
 
-#about {
+#about h1 {
+    font-weight: 900;
+    font-size: 1.75rem;
+    margin: 0 0 0.4rem;
+    line-height: 1.1;
+}
+
+#about p {
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0 0 0.3rem;
+    line-height: 1.4;
+}
+
+.seeking {
+    font-weight: 500 !important;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+}
+
+.seeking a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.seeking a:hover {
+    text-decoration: underline;
 }
 
 /* --------------------------------------------------
@@ -52,6 +98,7 @@ h1 {
 
 a.tile {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .tile {
@@ -61,18 +108,18 @@ a.tile {
     color: var(--color-text);
     display: inline-flex;
     font-family: inherit;
-    font-size: 1rem;
-    font-weight: 600;    
+    font-size: 0.95rem;
+    font-weight: 600;
     gap: 0.4rem;
-    padding: 0.5rem 1.1rem;
-    text-decoration: none;
+    padding: 0.45rem 1rem;
     transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    user-select: none;
 }
 
 .tile:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
-    color: var(--color-background)
+    color: var(--color-background);
 }
 
 .tile.github:hover {
@@ -85,4 +132,50 @@ a.tile {
     background-color: var(--color-linkedin);
     border-color: var(--color-linkedin);
     color: var(--color-background);
+}
+
+.tile.hackerrank:hover {
+    background-color: #00EA64;
+    border-color: #00EA64;
+    color: #1a1a1a;
+}
+
+.tile.hackerrank:hover .hr-icon path {
+    fill: #1a1a1a;
+}
+
+.hr-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    flex-shrink: 0;
+}
+
+.hr-icon path {
+    fill: var(--color-text);
+    transition: fill 0.15s ease;
+}
+
+/* --------------------------------------------------
+    LABELED TILES
+-------------------------------------------------- */
+
+.tile--labeled {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.55rem 1rem;
+    max-width: 100%;
+}
+
+.tile-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.tile--labeled:hover .tile-label {
+    color: var(--color-background);
+    opacity: 0.8;
 }
